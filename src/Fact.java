@@ -3,11 +3,9 @@ import java.util.Set;
 
 public class Fact {
     private String name;
-//    private boolean isTrueFact;
 
     Fact(String name) {
         this.name = name;
-//        isTrueFact = false;
     }
 
     @Override

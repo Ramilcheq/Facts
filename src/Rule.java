@@ -8,48 +8,38 @@ public class Rule {
     private Fact undefinedFact;
     private boolean isSolved = false;
 
-    public Rule() {
+    Rule() {
         factList = new ArrayList<>();
         operatorList = new ArrayList<>();
         undefinedFact = new Fact("");
         isSolved = false;
     }
 
-    public List<Fact> getFactList() {
+    List<Fact> getFactList() {
         return factList;
     }
 
-    public List<Operator> getOperatorList() {
+    List<Operator> getOperatorList() {
         return operatorList;
     }
 
-    public boolean isSolved() {
+    boolean isSolved() {
         return isSolved;
     }
 
-    public void setSolved(boolean solved) {
+    void setSolved(boolean solved) {
         isSolved = solved;
     }
 
-    public void setUndefinedFact(Fact undefinedFact) {
+    void setUndefinedFact(Fact undefinedFact) {
         this.undefinedFact = undefinedFact;
     }
 
-    public Fact getUndefinedFact() {
+    Fact getUndefinedFact() {
         return undefinedFact;
     }
 
-//    public Rule() {
-//        factList = new ArrayList<>();
-//        operatorList = new ArrayList<>();
-//    }
-//
-//    public Rule(List<Fact> factList) {
-//        this.factList = factList;
-//        this.operatorList = new ArrayList<>();
-//    }
-
-    public Rule(List<Fact> factList, List<Operator> operatorList) {
+    Rule(List<Fact> factList, List<Operator> operatorList) {
         this.factList = factList;
         this.operatorList = operatorList;
     }

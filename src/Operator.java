@@ -1,0 +1,3 @@
+enum Operator {
+    AND, OR;
+}

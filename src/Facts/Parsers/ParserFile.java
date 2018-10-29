@@ -2,9 +2,6 @@ package Facts.Parsers;
 
 import Facts.*;
 import Facts.Expression.*;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.*;

@@ -150,7 +150,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileNegativeTest3() throws Exception {
+    public void FileNegativeTest3() {
         Facts.main(new String[]{"-f", pathFile + "IncorrectExceptionFile1.txt"});
         String expected = "Error in line #4\r\n";
         String actual = outContent.toString();
@@ -158,7 +158,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileNegativeTest4() throws Exception {
+    public void FileNegativeTest4() {
         Facts.main(new String[]{"-f", pathFile + "IncorrectExceptionFile2.txt"});
         String expected = "Error in fact, line #8\r\n";
         String actual = outContent.toString();
@@ -166,7 +166,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileNegativeTest5() throws Exception {
+    public void FileNegativeTest5() {
         Facts.main(new String[]{"-f", pathFile + "IncorrectExceptionFile3.txt"});
         String expected = "Error in fact, line #6\r\n";
         String actual = outContent.toString();
@@ -174,7 +174,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileNegativeTest6() throws Exception {
+    public void FileNegativeTest6() {
         Facts.main(new String[]{"-f", pathFile + "IncorrectExceptionFile4.txt"});
         String expected = "Error in line #7: facts already read\r\n";
         String actual = outContent.toString();
@@ -183,7 +183,7 @@ public class MainTests {
 
     //
     @Test
-    public void FileTest1() throws Exception {
+    public void FileTest1() {
         Facts.main(new String[]{"-f", pathFile + "6.txt"});
         String expected = "A, B, C, d, D";
         String actual = outContent.toString();
@@ -191,7 +191,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileTest2() throws Exception {
+    public void FileTest2() {
         Facts.main(new String[]{"-f", pathFile + "1.txt"});
         String expected = "_a3, A, a3, A3, Aa3, a_3, ____________________a, _________a3, Aaaaa3";
         String actual = outContent.toString();
@@ -199,7 +199,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileTest3() throws Exception {
+    public void FileTest3() {
         Facts.main(new String[]{"-f", pathFile + "2.txt"});
         String expected = "a1, A, a, C, D, b_1_";
         String actual = outContent.toString();
@@ -207,7 +207,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileTest4() throws Exception {
+    public void FileTest4() {
         Facts.main(new String[]{"-f", pathFile + "3.txt"});
         String expected = "_a_, _b_, _c3, d2";
         String actual = outContent.toString();
@@ -215,7 +215,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileTest5() throws Exception {
+    public void FileTest5() {
         Facts.main(new String[]{"-f", pathFile + "4.txt"});
         String expected = "b, C";
         String actual = outContent.toString();
@@ -223,7 +223,7 @@ public class MainTests {
     }
 
     @Test
-    public void FileTest6() throws Exception {
+    public void FileTest6() {
         Facts.main(new String[]{"-f", pathFile + "5.txt"});
         String expected = "a, b, c, d, e, f, g";
         String actual = outContent.toString();

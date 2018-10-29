@@ -10,10 +10,6 @@ public class Model {
         return rules;
     }
 
-    public Set<String> getTrueFacts() {
-        return trueFacts;
-    }
-
     private Set<String> trueFacts;
 
     public Model(List<Rule> rules, Set<String> facts) {

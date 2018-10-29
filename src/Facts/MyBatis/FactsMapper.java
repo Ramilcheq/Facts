@@ -1,10 +1,9 @@
 package Facts.MyBatis;
 
-import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
-import java.util.Map;
+
 
 public interface FactsMapper {
     @Select("SELECT fact FROM facts")

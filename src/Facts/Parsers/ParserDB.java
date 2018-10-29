@@ -11,8 +11,6 @@ import Facts.MyBatis.RuleDB;
 import Facts.Rule;
 
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class ParserDB implements IParser {
     private FactDao factDao;

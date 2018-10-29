@@ -1,6 +1,5 @@
 package Facts.MyBatis;
 
-import Facts.RuleResultHandler;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;

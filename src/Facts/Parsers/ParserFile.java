@@ -12,18 +12,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ParserFile implements IParser {
-    private static final String FACT_PATTERN = "(\\_*[A-Za-z]+\\w*)";
     private static final String SEPARATOR = "----------------------------------------------------------------";
     private int lineNumber;
 
     // Чтение файла и создание модели
-    public Model parse(String... fileName) throws Exception {
+    public Model parse(String source[]) throws Exception {
         List<Rule> rules = new ArrayList<>();
         Set<String> facts = new HashSet<>();
         lineNumber = 0;
 
         try (BufferedReader reader = new BufferedReader(
-                new FileReader(fileName[0]))) {
+                new FileReader(source[1]))) {
             String line;
             ReaderState state = ReaderState.READING_EXPRESSIONS;
             while ((line = reader.readLine()) != null) {

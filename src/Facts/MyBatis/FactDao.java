@@ -12,11 +12,11 @@ public class FactDao {
     private String user;
     private String password;
 
-    public FactDao(String... source) throws Exception {
-        this.dbDriver = getDbDriver(source[0]);
-        this.dbUrl = source[1];
-        this.user = source[2];
-        this.password = source[3];
+    public FactDao(String source[]) throws Exception {
+        this.dbDriver = getDbDriver(source[1]);
+        this.dbUrl = source[2];
+        this.user = source[3];
+        this.password = source[4];
     }
 
     private String getDbDriver(String dbName) throws Exception {

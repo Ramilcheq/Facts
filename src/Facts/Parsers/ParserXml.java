@@ -19,10 +19,10 @@ import java.util.Set;
 
 public class ParserXml implements IParser {
     @Override
-    public Model parse(String... fileName) throws Exception {
-        validateXml(fileName[0]);
+    public Model parse(String source[]) throws Exception {
+        validateXml(source[1]);
         JAXBImpl jaxb = new JAXBImpl();
-        RulesFacts rulesFacts = (RulesFacts) jaxb.getObject(new File(fileName[0]), RulesFacts.class);
+        RulesFacts rulesFacts = (RulesFacts) jaxb.getObject(new File(source[1]), RulesFacts.class);
         List<Rule> rules = rulesFacts.getRules();
         Set<String> facts = rulesFacts.getFacts();
         return new Model(rules, facts);

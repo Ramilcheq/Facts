@@ -1,0 +1,105 @@
+<Rules_Facts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:noNamespaceSchemaLocation="schema.xsd">
+    <Rules>
+        <Rule>
+            <Or>
+                <And>
+                    <Fact fact="b"/>
+                    <Fact fact="b"/>
+                </And>
+                <And>
+                    <Fact fact="b"/>
+                    <Fact fact="b"/>
+                </And>
+            </Or>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <And>
+                <Fact fact="b"/>
+                <Fact fact="b"/>
+            </And>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <And>
+                <Fact fact="b"/>
+                <Fact fact="b"/>
+            </And>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <Fact fact="b"/>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <And>
+                <Fact fact="b"/>
+                <Fact fact="b"/>
+            </And>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <Or>
+                <And>
+                    <Fact fact="b"/>
+                    <Fact fact="b"/>
+                </And>
+                <Fact fact="b"/>
+            </Or>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <Or>
+                <Fact fact="a"/>
+                <Fact fact="b"/>
+                <Fact fact="c"/>
+                <Fact fact="sa"/>
+            </Or>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <Or>
+                <Fact fact="a"/>
+                <And>
+                    <Fact fact="b"/>
+                    <Fact fact="c"/>
+                </And>
+                <Fact fact="sa"/>
+            </Or>
+            <Result>d</Result>
+        </Rule>
+        <Rule>
+            <Or>
+                <Fact fact="E"/>
+                <And>
+                    <Fact fact="AD"/>
+                    <Fact fact="F"/>
+                    <Fact fact="K"/>
+                </And>
+                <Fact fact="aa"/>
+                <And>
+                    <Fact fact="Q"/>
+                    <Fact fact="W"/>
+                </And>
+                <Fact fact="aq"/>
+            </Or>
+            <Result>I</Result>
+        </Rule>
+        <Rule>
+            <Fact fact="C"/>
+            <Result>D</Result>
+        </Rule>
+    </Rules>
+    <Facts>
+        <Fact>_a3</Fact>
+        <Fact>A</Fact>
+        <Fact>a3</Fact>
+        <Fact>A3</Fact>
+        <Fact>Aa3</Fact>
+        <Fact>a_3</Fact>
+        <Fact>____________________a</Fact>
+        <Fact>_________a3</Fact>
+        <Fact>Aaaaa3</Fact>
+    </Facts>
+</Rules_Facts>

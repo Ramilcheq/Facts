@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- definition of simple types -->
+    <xs:simpleType name="Fact">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\_*[A-Za-z]+[A-Za-z0-9_]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- definition of complex types -->
+    <xs:complexType name="FactExpression">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="fact" use="required" type="Fact"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="AndExpression">
+        <xs:sequence>
+            <xs:element name="Fact" type="FactExpression" maxOccurs="unbounded" minOccurs="2"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrExpression">
+        <xs:choice maxOccurs="unbounded" minOccurs="2">
+            <xs:element name="And" type="AndExpression"/>
+            <xs:element name="Fact" type="FactExpression"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Rule">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="Or" type="OrExpression"/>
+                <xs:element name="And" type="AndExpression"/>
+                <xs:element name="Fact" type="FactExpression"/>
+            </xs:choice>
+            <xs:element name="Result" type="Fact"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Rules">
+        <xs:sequence maxOccurs="unbounded" minOccurs="1">
+            <xs:element name="Rule" type="Rule"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FactsType">
+        <xs:sequence maxOccurs="unbounded" minOccurs="1">
+            <xs:element name="Fact" type="Fact"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- definition of elements -->
+    <xs:element name="Rules_Facts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Rules" type="Rules"/>
+                <xs:element name="Facts" type="FactsType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

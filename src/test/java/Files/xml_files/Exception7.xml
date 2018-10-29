@@ -1,0 +1,21 @@
+<Rules_Facts>
+    <Rules>
+        <Rule>
+            <Or>
+                <And>
+                    <Fact fact="b"/>
+                    <Fact fact="b"/>
+                </And>
+                <And>
+                    <Fact fact="b"/>
+                    <Fact fact="b"/>
+                </And>
+            </Or>
+            <Fact fact="b"/>
+            <Result>d</Result>
+        </Rule>
+    </Rules>
+    <Facts>
+        <Fact>q</Fact>
+    </Facts>
+</Rules_Facts>

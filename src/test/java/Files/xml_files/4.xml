@@ -1,0 +1,15 @@
+<Rules_Facts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="schema.xsd">
+    <Rules>
+        <Rule>
+            <And>
+                <Fact fact="_ds234_"/>
+                <Fact fact="b"/>
+            </And>
+            <Result>d</Result>
+        </Rule>
+    </Rules>
+    <Facts>
+        <Fact>Aa______32aaa3</Fact>
+    </Facts>
+</Rules_Facts>

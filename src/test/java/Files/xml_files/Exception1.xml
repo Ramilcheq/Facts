@@ -1,0 +1,12 @@
+<Rules_Facts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="schema.xsd">
+    <Rules>
+        <Rule>
+            <Fact fact="C"/>
+            <Result>D</Result>
+        </Rule>
+    </Rules>
+    <Facts>
+
+    </Facts>
+</Rules_Facts>

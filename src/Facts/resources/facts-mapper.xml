@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="facts" >
+    <resultMap id="exprDB" type="ExprDB">
+        <result property="id" column="id" />
+        <result property="type" column="type" />
+        <result property="fact" column="fact"/>
+    </resultMap>
+
+    <select id="selectFacts" resultType="string">
+        SELECT fact from facts
+    </select>
+
+    <select id="selectRules" resultType="map">
+        SELECT expression_id, result_fact from rules
+    </select>
+
+    <select id="selectExpr" parameterType="int" resultType="exprDB">
+        SELECT expression_id, type, fact from expressions where expression_id =#{id}
+    </select>
+
+    <select id="selectExprChildren" parameterType="int" resultType="exprDB">
+<!--        SELECT id, type, fact from expressions where id in (SELECT child from siblings where parent=#{id}) -->
+        SELECT expressions.expression_id, expressions.type, expressions.fact
+        FROM siblings JOIN expressions ON siblings.child = expressions.expression_id
+        WHERE siblings.parent = #{id}
+    </select>
+
+</mapper>
